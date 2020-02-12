@@ -57,9 +57,7 @@
 // START SEARCH
 
 .search {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bgp;
   min-height: 533px;
 }
 .search__inner {
@@ -145,10 +143,8 @@
   margin-bottom: 30px;
   &-img {
     min-height: 250px;
-    background-repeat: no-repeat;
     display: block;
-    background-position: center;
-    background-size: cover;
+    @include bgp;
   }
   &-content {
     display: flex;
@@ -192,11 +188,9 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background-position: center;
       display: inline-block;
-      background-repeat: no-repeat;
-      background-size: cover;
       margin-right: 14px;
+      @include bgp;
     }
     span {
       font-size: 14px;
@@ -317,9 +311,7 @@
 //START SECTION AUTHOR
 
 .author {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include bgp;
   min-height: 750px;
   display: flex;
   justify-content: center;
@@ -352,3 +344,33 @@
 }
 
 //END SECTION AUTHOR
+//START SECTION TUTORIAL
+
+.tutorial {
+  padding: 70px 0 120px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+.tutorial__item {
+  &-images {
+    min-height: 270px;
+    @include bgp;
+  }
+  &-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    @include f700;
+    padding: 30px 10px;
+    color: $bg;
+    text-align: center;
+  }
+}
+
+//END SECTION TUTORIAL
